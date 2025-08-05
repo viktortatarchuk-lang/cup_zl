@@ -75,5 +75,6 @@ def create_app():
     app.on_shutdown.append(on_shutdown)
     return app
 
-if name == '__main__':
+if __name__ == '__main__':
+
     web.run_app(create_app(), port=int(os.getenv("PORT", 8000)))
